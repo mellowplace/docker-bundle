@@ -21,3 +21,11 @@ At a minimum it should:
 * `app/console docker:package`
 
   > Runs a build and then packages the app with the prod Dockerfile
+
+* `app/console docker:test`
+
+  > Runs the testsuite inside the docker container, this is good for two reasons
+  > 1. Your tests will run in an environment consistent with production
+  > 2. If your tests require a database or other external system you can inject a throw
+  >    away container that will mean your parameters.yml needs not differ for any 
+  >    environment
